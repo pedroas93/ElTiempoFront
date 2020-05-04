@@ -6,6 +6,32 @@ This is The Front Test
 
 The DB was created with Firestore, the credential will send trought email, Why I used Firestore?, because you ask me about the no-sql DB and google services like google analytics, so why no?
 
+path:
+https://console.firebase.google.com/project/fashioneltiempo/overview
+
+credentials:
+
+david.pedraza@javeriana.edu.co
+udavid0103202208
+
+## THE GITHUB
+
+path:
+
+https://github.com/pedroas93/ElTiempoFront
+
+## Heroku 
+
+PAth:
+
+https://eltiempofronttest.herokuapp.com/
+
+## Azure DevOps
+
+For some iuses with my microsoft account I could not work with my account, but I used the account of my sister.
+
+path:
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
