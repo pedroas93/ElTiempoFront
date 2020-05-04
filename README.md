@@ -22,8 +22,6 @@ https://github.com/pedroas93/ElTiempoFront
 
 ## Heroku 
 
-The Google autentication has some problems when You use Heroku
-
 PAth:
 
 https://eltiempofronttest.herokuapp.com/
