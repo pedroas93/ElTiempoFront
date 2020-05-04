@@ -19,7 +19,6 @@ class PublicHeader extends Component {
               <img alt="ElTiempoLogo" src={ElTiempoLogo} style={{width: "20%"}}/>
             </Link>
             </div>
-
             <div className="d-sm-none col-12 header-unlogued mt-2">
               <Link to="/resumen">
                 <img alt="ElTiempoLogo" src={ElTiempoLogo} style={{width: "20%"}} />
