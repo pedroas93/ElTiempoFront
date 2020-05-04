@@ -4,6 +4,7 @@ This is The Front Test
 
 ## THE DATA BASE
 
+
 The DB was created with Firestore, the credential will send trought email, Why I used Firestore?, because you ask me about the no-sql DB and google services like google analytics, so why no?
 
 path:
