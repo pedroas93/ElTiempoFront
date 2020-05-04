@@ -1,10 +1,5 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom';
-// import PropTypes from 'prop-types';
-
-// redux
-// import {connect} from 'react-redux';
-// import {SetMenuManager} from '../PrivateViews/Menu_Actions';
 
 class MenuList extends Component {
 
@@ -34,14 +29,5 @@ class MenuList extends Component {
     );
   }
 }
-
-// MenuList.propTypes = {
-//   disabled: PropTypes.bool.isRequired,
-// };
-
-// const mapStateToProps = state => ({
-//   menu: state.menu.menu
-// })
-
 
 export default MenuList;
