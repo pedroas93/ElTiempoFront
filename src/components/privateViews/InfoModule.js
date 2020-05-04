@@ -1,46 +1,85 @@
-import React, {Component} from "react";
-import {Link} from "react-router-dom";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { connect } from 'react-redux'
+import { Provider } from 'react-redux'
+import store from '../../store'
+
+function mapStateToProps(state) {
+  return {
+    genre: state.genre
+  }
+}
 
 class InfoModule extends Component {
 
   constructor(props) {
-		super(props);
-		this.state = {
-			genre: ''
-		}
-  }
-  
-  componentWillMount() {
-    if(this.props.module.indexOf("2b3e915a") === -1){
-      this.setState({ genre: "Mujer" });
-    }else{
-      this.setState({ genre: "Hombre" });
+    super(props);
+    this.state = {
+      genre: ''
     }
   }
-    
+
+
+  componentWillMount() {
+    let genreComponent = ''
+    if (this.props.module.indexOf("woman") === -1) {
+      this.setState({ genre: "Hombre" });
+      genreComponent = 'Hombre'
+    } else {
+      this.setState({ genre: "Mujer" });
+      genreComponent = 'Mujer'
+
+    }
+
+    store.dispatch({
+      type: 'SET_CATEGORY_LIST',
+      payload: {
+        genreComponent
+      }
+    })
+  }
+
   stylesImage = image_link => ({
     backgroundImage: `url(${image_link})`,
   });
 
-  element = () => {
 
+  element = () => {
     let element = (
-      <div className="col-8 col-md-6">
-        <h2>{this.state.genre}</h2>
-        <Link to={this.props.module}>
-          <div className="square" style={this.stylesImage(this.props.module)}/>
-        </Link>
-      </div>
+      <Provider
+        store={store}
+      >
+        <div className="col-8 col-md-6">
+          {mapStateToProps.list}
+          <Link to={'/Shop/Clothes/Mujer'}>
+            <div className="square" style={this.stylesImage(this.props.module)} />
+          </Link>
+        </div>
+      </Provider>
     );
+    if(this.state.genre === 'Hombre'){
+      element = (
+        <Provider
+          store={store}
+        >
+          <div className="col-8 col-md-6">
+            {mapStateToProps.list}
+            <Link to={'/Shop/Clothes/Hombre'}>
+              <div className="square" style={this.stylesImage(this.props.module)} />
+            </Link>
+          </div>
+        </Provider>
+      );
+    }
     return element;
+
   };
 
+
   render() {
+
     return this.element(this.props.module);
   }
 }
 
-InfoModule.propTypes = {
-};
-
-export default InfoModule;
+export default connect(mapStateToProps)(InfoModule);

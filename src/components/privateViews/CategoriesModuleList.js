@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import InfoModule from "./InfoModule";
 
-class InfoModuleList extends Component {
+class CategoriesModuleList extends Component {
 
   render() {
     return (
@@ -21,8 +21,8 @@ class InfoModuleList extends Component {
   }
 }
 
-InfoModuleList.propTypes = {
+CategoriesModuleList.propTypes = {
   modules: PropTypes.array.isRequired,
 };
 
-export default InfoModuleList;
+export default CategoriesModuleList;

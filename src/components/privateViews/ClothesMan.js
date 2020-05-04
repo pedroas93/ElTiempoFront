@@ -6,11 +6,16 @@ import CategoriesModuleList from "./CategoriesModuleList";
 import { Provider } from 'react-redux'
 import store from '../../store'
 
-export default function ShopFunction() {
+
+export default  function ClothesFunctionMan() {
 	const [loading] = useState(0);
 	const shopRef  = useFirestore()
 		.collection('shop')
 		.doc('BOrb8r5fKvpt5qmZpOOQ')
+		.collection("Hombre")
+		.doc('wkX4im1WEficENH6Qant')
+		.collection("Tenis")
+		.doc('3Hd2iFwJbBOHCetaIjDR')
 
 	const shop = useFirestoreDocData(shopRef);
 

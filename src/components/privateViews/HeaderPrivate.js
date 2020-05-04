@@ -12,10 +12,6 @@ class HeaderPrivate extends Component {
       };
   }
 
-
-  logoutUser = () => {
-  };
-
   render() {
     return (
       <div>
@@ -27,7 +23,7 @@ class HeaderPrivate extends Component {
         <hr></hr>
           <ul className="d-flex align-items-center">
             <li className="nav-item dropdown">
-                <a href="/" className="dropdown-item" onClick={this.logoutUser}>Cerrar Sesión</a>
+                {/* <a href="/" className="dropdown-item" >Cerrar Sesión</a> */}
             </li>
           </ul>
         </nav>

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import ElTiempoLogo from "../../images/ElTiempoLogo.png";
-
+import Login from './Login'
 
 class PublicHeader extends Component {
   render() {
@@ -9,9 +9,10 @@ class PublicHeader extends Component {
       <div className="container-fluid-ak gradient-bk">
         <div className="row">
           <div className="col-auto text-left">
-            <Link className="btn btn-primary btn-top" to="/login">
+            {/* <Link className="btn btn-primary btn-top" to="/login">
               Ingreso Cuenta
-            </Link>
+            </Link> */}
+            <Login />
           </div>
 
           <div className="d-none d-sm-block col header-unlogued mb-2 mt-2">

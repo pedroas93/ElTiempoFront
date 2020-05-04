@@ -31,7 +31,7 @@ class ContactUs extends Component {
                                         <ul className="socialShare">
                                             <div className="col-lg-10 col-xl-8">
                                                 <li key={Math.random()}>
-                                                    <a href={"https://www.facebook.com/eltiempo"} target="_blank" className={"facebookIcon"}>{"Facebook"}</a>
+                                                    <a href={"https://www.facebook.com/eltiempo"} className={"facebookIcon"}>{"Facebook"}</a>
 
                                                 </li>
                                             </div>
